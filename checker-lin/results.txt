@@ -1,0 +1,76 @@
+
+00) Sources check...........................................passed  [00/95]
+01) Test simple execution...................................failed  [ 0/95]
+Incorrect exit code: got 139, expected 0
+Incorrect number of faults: got 2, expected 1
+02) Test hello..............................................failed  [ 0/95]
+_test/outputs/test2.out vs _test/refs/test2.ref:
+--- _test/outputs/test2.out	2022-11-19 19:20:23.983091577 +0200
++++ _test/refs/test2.ref	2022-11-13 02:53:38.484740990 +0200
+@@ -1,32 +1 @@
+-si_addr: 0x804801c
+-exec_name: _test/inputs/hello
+-index: 0
+-page size: 4096
+-base_addr: 0x8048000
+-entry: 0x80480b8
+-segments_no: 2
+Incorrect exit code: got 139, expected 0
+Incorrect number of faults: got 3, expected  2
+03) Test sum................................................failed  [ 0/95]
+_test/outputs/test3.out vs _test/refs/test3.ref:
+--- _test/outputs/test3.out	2022-11-19 19:20:24.015091836 +0200
++++ _test/refs/test3.ref	2022-11-13 02:53:38.484740990 +0200
+@@ -1,17 +1 @@
+-si_addr: 0x804801c
+-exec_name: _test/inputs/sum
+-index: 0
+-page size: 4096
+-base_addr: 0x8048000
+-entry: 0x80480e0
+-segments_no: 2
+Incorrect exit code: got 139, expected 0
+Incorrect number of faults: got 2, expected  3
+04) Test bss................................................failed  [ 0/95]
+_test/outputs/test4.out vs _test/refs/test4.ref:
+--- _test/outputs/test4.out	2022-11-19 19:20:24.071092286 +0200
++++ _test/refs/test4.ref	2022-11-13 02:53:38.484740990 +0200
+@@ -1,17 +1 @@
+-si_addr: 0x804801c
+-exec_name: _test/inputs/bss
+-index: 0
+-page size: 4096
+-base_addr: 0x8048000
+-entry: 0x80480e0
+-segments_no: 2
+Incorrect exit code: got 139, expected 0
+05) Test data and bss.......................................failed  [ 0/95]
+_test/outputs/test5.out vs _test/refs/test5.ref:
+--- _test/outputs/test5.out	2022-11-19 19:20:24.127092737 +0200
++++ _test/refs/test5.ref	2022-11-13 02:53:38.484740990 +0200
+@@ -1,17 +1 @@
+-si_addr: 0x804801c
+-exec_name: _test/inputs/data_bss
+-index: 0
+-page size: 4096
+-base_addr: 0x8048000
+-entry: 0x80480e0
+-segments_no: 2
+Incorrect exit code: got 139, expected 0
+Incorrect number of faults: got 2, expected  3
+06) Test no permissions.....................................passed  [10/95]
+07) Test invalid permissions................................failed  [ 0/95]
+Incorrect number of faults: got 2, expected 1
+08) Test permissions........................................failed  [ 0/95]
+_test/outputs/test8.out vs _test/refs/test8.ref:
+--- _test/outputs/test8.out	2022-11-19 19:20:24.203093349 +0200
++++ _test/refs/test8.ref	2022-11-13 02:53:38.484740990 +0200
+@@ -1,17 +1 @@
+-si_addr: 0x804801c
+-exec_name: _test/inputs/check_perm
+-index: 0
+-page size: 4096
+-base_addr: 0x8048000
+-entry: 0x8048452
+-segments_no: 2
+Incorrect exit code: got 139, expected 0
